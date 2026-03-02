@@ -122,19 +122,17 @@ const chartData = [
 ]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
+  visitors: { label: "Visitors" },
 
   desktop: {
     label: "Desktop",
-    color: "var(--primary)",
+    color: "hsl(var(--chart-1))",
   },
 
   mobile: {
     label: "Mobile",
-    color: "var(--primary)",
-  }
+    color: "hsl(var(--chart-2))",
+  },
 }
 
 export function ChartAreaInteractive() {

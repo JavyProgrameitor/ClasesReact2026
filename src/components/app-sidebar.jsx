@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 
 import { NavDocuments } from "@/components/nav-documents"
@@ -14,6 +16,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { LayoutDashboardIcon, ListIcon, ChartBarIcon, FolderIcon, UsersIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, DatabaseIcon, FileChartColumnIcon, FileIcon, CommandIcon } from "lucide-react"
+import { Form } from "react-router-dom"
 
 const data = {
   user: {
@@ -24,18 +27,33 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/dashboard",
       icon: (
         <LayoutDashboardIcon />
       ),
     },
     {
-      title: "Lifecycle",
-      url: "#",
+      title: "Prueba",
+      url: "/prueba",
       icon: (
         <ListIcon />
       ),
     },
+       {
+      title: "Contador",
+      url: "/contador",
+      icon: (
+        <ChartBarIcon />
+      ),
+    },
+      {
+      title: "Forms",
+      url: "/forms",
+      icon: (
+        <FileTextIcon />
+      ),
+    },
+   
   ],
   navClouds: [
     {
@@ -115,7 +133,7 @@ const data = {
     },
   ],
   documents: [
-    {
+  /*  {
       name: "Data Library",
       url: "#",
       icon: (
@@ -135,10 +153,9 @@ const data = {
       icon: (
         <FileIcon />
       ),
-    },
+    },*/
   ],
 }
-
 export function AppSidebar({
   ...props
 }) {
@@ -147,19 +164,19 @@ export function AppSidebar({
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:p-1.5!">
-              <a href="#">
-                <CommandIcon className="size-5!" />
-                <span className="text-base font-semibold">Acme Inc.</span>
-              </a>
+            <SidebarMenuButton
+              className="data-[slot=sidebar-menu-button]:p-1.5!"
+              render={<a href="#" />}>
+              <CommandIcon className="size-5!" />
+              <span className="text-base font-semibold">Acme Inc.</span>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
-        <NavSecondary items={data.navSecondary} className="mt-auto" />
+        {/*<NavDocuments items={data.documents} />*/}
+         {/*<NavSecondary items={data.navSecondary} className="mt-auto" />*/}
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />

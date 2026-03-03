@@ -1,5 +1,3 @@
-"use client"
-
 import * as React from "react"
 import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 
@@ -122,17 +120,19 @@ const chartData = [
 ]
 
 const chartConfig = {
-  visitors: { label: "Visitors" },
+  visitors: {
+    label: "Visitors",
+  },
 
   desktop: {
     label: "Desktop",
-    color: "hsl(var(--chart-1))",
+    color: "var(--primary)",
   },
 
   mobile: {
     label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
+    color: "var(--primary)",
+  }
 }
 
 export function ChartAreaInteractive() {
@@ -171,16 +171,24 @@ export function ChartAreaInteractive() {
         </CardDescription>
         <CardAction>
           <ToggleGroup
-            type="single"
-            value={timeRange}
-            onValueChange={setTimeRange}
+            multiple={false}
+            value={timeRange ? [timeRange] : []}
+            onValueChange={(value) => {
+              setTimeRange(value[0] ?? "90d")
+            }}
             variant="outline"
             className="hidden *:data-[slot=toggle-group-item]:px-4! @[767px]/card:flex">
             <ToggleGroupItem value="90d">Last 3 months</ToggleGroupItem>
             <ToggleGroupItem value="30d">Last 30 days</ToggleGroupItem>
             <ToggleGroupItem value="7d">Last 7 days</ToggleGroupItem>
           </ToggleGroup>
-          <Select value={timeRange} onValueChange={setTimeRange}>
+          <Select
+            value={timeRange}
+            onValueChange={(value) => {
+              if (value !== null) {
+                setTimeRange(value)
+              }
+            }}>
             <SelectTrigger
               className="flex w-40 **:data-[slot=select-value]:block **:data-[slot=select-value]:truncate @[767px]/card:hidden"
               size="sm"

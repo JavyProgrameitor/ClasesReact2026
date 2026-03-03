@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import {
   SidebarGroup,
@@ -7,10 +9,14 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { CirclePlusIcon, MailIcon } from "lucide-react"
+import { Link, useLocation } from "react-router-dom"
 
 export function NavMain({
   items
 }) {
+
+  const location = useLocation()
+
   return (
     <SidebarGroup>
       <SidebarGroupContent className="flex flex-col gap-2">
@@ -34,9 +40,10 @@ export function NavMain({
         <SidebarMenu>
           {items.map((item) => (
             <SidebarMenuItem key={item.title}>
-              <SidebarMenuButton tooltip={item.title}>
+              <SidebarMenuButton tooltip={item.title} className="cursor-pointer"
+              isActive={location.pathname === item.url}>               
                 {item.icon}
-                <span>{item.title}</span>
+                <span><Link to= {item.url}>{item.title}</Link></span>
               </SidebarMenuButton>
             </SidebarMenuItem>
           ))}

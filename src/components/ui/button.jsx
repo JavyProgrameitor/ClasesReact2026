@@ -42,14 +42,18 @@ function Button({
   className,
   variant = "default",
   size = "default",
+  capitalize = false,
   ...props
 }) {
   return (
     <ButtonPrimitive
       data-slot="button"
-      className={cn(buttonVariants({ variant, size, className }))}
+      className={cn(buttonVariants({ variant, size, className }),
+        {capitalize: capitalize}
+  )}
       {...props} />
   );
+  
 }
 
 export { Button, buttonVariants }

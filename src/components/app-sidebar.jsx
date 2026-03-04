@@ -1,10 +1,7 @@
 "use client"
 
 import * as React from "react"
-
-import { NavDocuments } from "@/components/nav-documents"
 import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
 import { NavUser } from "@/components/nav-user"
 import {
   Sidebar,
@@ -53,7 +50,27 @@ const data = {
         <FileTextIcon />
       ),
     },
-   
+      {
+      title: "Forms-Context",
+      url: "/context",
+      icon: (
+        <FolderIcon />
+      ),
+    },
+        {
+      title: "Forms-Redux",
+      url: "/redux",
+      icon: (
+        <LayoutDashboardIcon />
+      ),
+    },
+       {
+      title: "Shadcn",
+      url: "/shadcn",
+      icon: (
+        <FileChartColumnIcon />
+      ),
+    },
   ],
   navClouds: [
     {

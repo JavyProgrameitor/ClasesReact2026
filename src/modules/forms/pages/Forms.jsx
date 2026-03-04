@@ -34,8 +34,8 @@ export const Forms = () => {
         },
         {
             id: 2,
-            name: "Luis Miguel",
-            task: "LLamar a Citroen",
+            name: "Pepe Ruiz",
+            task: "Comer en casa de Pepe",
             category: "Personal",
             priority: "Alta",
             completed: false

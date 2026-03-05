@@ -6,6 +6,7 @@ import { Contador } from "./modules/forms/pages/Contador"
 import { Forms } from "./modules/forms/pages/Forms"
 import { FormsContext } from "./modules/forms/pages/FormsContext"
 import { FormsRedux } from "./modules/forms/pages/FormsRedux"
+import { FormIndex } from "./modules/Formularios/pages/FormIndex"
 import { ShadcnIndex } from "./modules/shadcndemo/pages/ShadcnIndex"
 import { Prueba } from "./Prueba"
 import { Prueba2 } from "./Prueba2"
@@ -27,6 +28,7 @@ function App() {
           <Route path="/prueba2" element={<Prueba2 />}></Route>
           <Route path="/shadcn" element={<ShadcnIndex />}></Route>
            <Route path="/data-table" element={<DataTablePage />}></Route>
+           <Route path="/formularios" element={<FormIndex />}></Route>
         </Route>
 
           <Route path="*" element={<Error404/>}/>

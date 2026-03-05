@@ -34,7 +34,8 @@ export function DataTable({
 
   const [sorting, setSorting] = useState([])
   const [columnFilters, setColumnFilters] = useState([])
-   const [columnVisibility, setColumnVisibility] = useState({})
+  const [columnVisibility, setColumnVisibility] = useState({})
+  const [rowSelection, setRowSelection] = useState({})
 
   const table = useReactTable({
     data,
@@ -45,13 +46,13 @@ export function DataTable({
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
-    getFilteredRowModel: getFilteredRowModel(),
     onColumnVisibilityChange: setColumnVisibility,
-
+    onRowSelectionChange: setRowSelection,
     state: {
       sorting,
       columnFilters,
       columnVisibility,
+      rowSelection,
     },
   })
 
@@ -66,12 +67,12 @@ export function DataTable({
           }
           className="max-w-sm"
         />
-
-               <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+        <DropdownMenu>
+          <DropdownMenuTrigger render={
             <Button variant="outline" className="ml-auto">
               Columns
             </Button>
+          }>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
             {table
@@ -143,6 +144,12 @@ export function DataTable({
         </Table>
       </div>
       <div className="flex items-center justify-end space-x-2 py-4">
+
+        <div className="flex-1 text-sm text-muted-foreground">
+          {table.getFilteredSelectedRowModel().rows.length} of{" "}
+          {table.getFilteredRowModel().rows.length} row(s) selected.
+        </div>
+
         <Button
           variant="outline"
           size="sm"

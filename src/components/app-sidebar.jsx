@@ -13,7 +13,7 @@ import {
   SidebarMenuItem,
 } from "@/components/ui/sidebar"
 import { LayoutDashboardIcon, ListIcon, ChartBarIcon, FolderIcon, UsersIcon, CameraIcon, FileTextIcon, Settings2Icon, CircleHelpIcon, SearchIcon, DatabaseIcon, FileChartColumnIcon, FileIcon, CommandIcon } from "lucide-react"
-import { Form } from "react-router-dom"
+
 
 const data = {
   user: {
@@ -75,7 +75,14 @@ const data = {
       title: "DataTable",
       url: "/data-table",
       icon: (
-        <FileIcon />
+        <DatabaseIcon />
+      ),
+    },
+         {
+      title: "Formularios",
+      url: "/formularios",
+      icon: (
+        <CameraIcon />
       ),
     },
   ],

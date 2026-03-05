@@ -10,6 +10,13 @@ import {
 } from "@tanstack/react-table"
 
 import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+
+import {
   Table,
   TableBody,
   TableCell,
@@ -27,6 +34,7 @@ export function DataTable({
 
   const [sorting, setSorting] = useState([])
   const [columnFilters, setColumnFilters] = useState([])
+   const [columnVisibility, setColumnVisibility] = useState({})
 
   const table = useReactTable({
     data,
@@ -37,10 +45,13 @@ export function DataTable({
     getSortedRowModel: getSortedRowModel(),
     onColumnFiltersChange: setColumnFilters,
     getFilteredRowModel: getFilteredRowModel(),
+    getFilteredRowModel: getFilteredRowModel(),
+    onColumnVisibilityChange: setColumnVisibility,
 
     state: {
       sorting,
       columnFilters,
+      columnVisibility,
     },
   })
 
@@ -55,6 +66,36 @@ export function DataTable({
           }
           className="max-w-sm"
         />
+
+               <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" className="ml-auto">
+              Columns
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            {table
+              .getAllColumns()
+              .filter(
+                (column) => column.getCanHide()
+              )
+              .map((column) => {
+                return (
+                  <DropdownMenuCheckboxItem
+                    key={column.id}
+                    className="capitalize"
+                    checked={column.getIsVisible()}
+                    onCheckedChange={(value) =>
+                      column.toggleVisibility(!!value)
+                    }
+                  >
+                    {column.id}
+                  </DropdownMenuCheckboxItem>
+                )
+              })}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
       </div>
 
       <div className="overflow-hidden rounded-md border">

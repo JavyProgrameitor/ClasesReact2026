@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Button } from "@/components/ui/button"
 import {
   Dialog,
@@ -14,42 +15,59 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export function DialogDemo() {
+  const nameRef = React.useRef(null)
 
-
-    const nameRef = useRef()
+  const handleSave = (e) => {
+    e.preventDefault()
+    alert(nameRef.current?.value ?? "")
+  }
 
   return (
     <Dialog>
-      <form>
-        <DialogTrigger render={<Button variant="outline">Open Dialog</Button>} />
-        <DialogContent className="sm:max-w-sm">
+      <DialogTrigger asChild>
+        <Button variant="outline">Open Dialog</Button>
+      </DialogTrigger>
+
+      <DialogContent className="sm:max-w-sm">
+        <form onSubmit={handleSave}>
           <DialogHeader>
             <DialogTitle>Edit profile</DialogTitle>
             <DialogDescription>
-              Make changes to your profile here. Click save when you&apos;re
-              done.
+              Make changes to your profile here. Click save when you&apos;re done.
             </DialogDescription>
           </DialogHeader>
+
           <FieldGroup>
             <Field>
               <Label htmlFor="name-1">Name</Label>
-              <Input id="name-1" 
-              ref={nameRef}
-              name="name" defaultValue="Pedro Duarte" />
+              <Input
+                id="name-1"
+                ref={nameRef}
+                name="name"
+                defaultValue="Pedro Duarte"
+              />
             </Field>
+
             <Field>
               <Label htmlFor="username-1">Username</Label>
               <Input id="username-1" name="username" defaultValue="@peduarte" />
             </Field>
           </FieldGroup>
+
           <DialogFooter>
-            <DialogClose render={<Button variant="outline">Cancel</Button>} />
-            <Button 
-            onClick={() => alert(nameRef.curret.value)}
-            type="submit">Save changes</Button>
+            <DialogClose asChild>
+              <Button type="button" variant="outline">
+                Cancel
+              </Button>
+            </DialogClose>
+
+            {/* Si quieres que se cierre al guardar, envuelve también con DialogClose */}
+            <DialogClose asChild>
+              <Button type="submit">Save changes</Button>
+            </DialogClose>
           </DialogFooter>
-        </DialogContent>
-      </form>
+        </form>
+      </DialogContent>
     </Dialog>
   )
 }

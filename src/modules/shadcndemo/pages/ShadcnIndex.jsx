@@ -13,7 +13,7 @@ const tabItems = [
     { value: 'AlertDemo', title: 'Alert', component: <AlertDemo /> },
     { value: 'ButtonDemo', title: 'Button', component: <ButtonDemo /> },
     { value: 'AlertDialog', title: 'AlertDialog', component: <AlertDialogDemo /> },
-    { value: 'Dialog', title: 'Dialog', component: <DialogDemo /> },
+    { value: 'DialogDemo', title: 'Dialog', component: <DialogDemo /> },
 ]
 
 

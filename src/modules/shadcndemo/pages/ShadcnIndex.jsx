@@ -5,6 +5,9 @@ import { AlertDemo } from '../components/AlertDemo';
 import { ButtonDemo } from '../components/ButtonDemo';
 import { AlertDialogDemo } from '../components/AlertDialogDemo';
 import { DialogDemo } from '../components/DialogDemo';
+import { ContextMenuDemo } from '../components/ContextMenuDemo';
+import { SheetDemo } from '../components/SheetDemo';
+import { TableDemo } from '../components/TableDemo';
 
 
 const tabItems = [
@@ -14,6 +17,9 @@ const tabItems = [
     { value: 'ButtonDemo', title: 'Button', component: <ButtonDemo /> },
     { value: 'AlertDialog', title: 'AlertDialog', component: <AlertDialogDemo /> },
     { value: 'DialogDemo', title: 'Dialog', component: <DialogDemo /> },
+    { value: 'ContextMenuDemo', title: 'ContextMenu', component: <ContextMenuDemo /> },
+    { value: 'SheetDemo', title: 'Sheet', component: <SheetDemo /> },
+    { value: 'TableDemo', title: 'Table', component: <TableDemo /> },
 ]
 
 

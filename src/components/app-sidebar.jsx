@@ -71,6 +71,13 @@ const data = {
         <FileChartColumnIcon />
       ),
     },
+       {
+      title: "DataTable",
+      url: "/data-table",
+      icon: (
+        <FileIcon />
+      ),
+    },
   ],
   navClouds: [
     {

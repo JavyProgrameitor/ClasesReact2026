@@ -7,6 +7,7 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import { TaskProvider } from './context/TaskContext'
 import { Provider } from 'react-redux'
 import store from './redux/store'
+import { Toaster } from 'sonner'
 
 
 createRoot(document.getElementById('root')).render(
@@ -15,8 +16,9 @@ createRoot(document.getElementById('root')).render(
       <TooltipProvider>
         <TaskProvider>
           <Provider store={store}>
-              <App />
-          </Provider>       
+            <Toaster />
+            <App />
+          </Provider>
         </TaskProvider>
       </TooltipProvider>
     </BrowserRouter>

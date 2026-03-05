@@ -1,6 +1,7 @@
 import { Error404 } from "./layout/Error404"
 import Layout from "./layout/Layout"
 import { Dashboard } from "./modules/dashboard/pages/Dashboard"
+import { DataTablePage } from "./modules/DataTable/pages/DataTablePage"
 import { Contador } from "./modules/forms/pages/Contador"
 import { Forms } from "./modules/forms/pages/Forms"
 import { FormsContext } from "./modules/forms/pages/FormsContext"
@@ -25,6 +26,7 @@ function App() {
           <Route path="/prueba" element={<Prueba />}></Route>
           <Route path="/prueba2" element={<Prueba2 />}></Route>
           <Route path="/shadcn" element={<ShadcnIndex />}></Route>
+           <Route path="/data-table" element={<DataTablePage />}></Route>
         </Route>
 
           <Route path="*" element={<Error404/>}/>

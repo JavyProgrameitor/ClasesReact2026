@@ -2,12 +2,17 @@ import React from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Controlled } from '../components/Controlled';
 import { Uncontrolled } from '../components/Uncontrolled';
+import { RHF } from '../components/RHF';
+import { RHFZod } from '../components/RHFZod';
+import { RHFZodShadcn } from '../components/RHFZodShadcn';
 
 const tabItems = [
     // Agrega más tabs según sea necesario
     { value: 'Uncontrolled', title: 'Uncontrolled', component: <Uncontrolled /> },
     { value: 'Controlled', title: 'Controlled', component: <Controlled /> },
-
+      { value: 'RHF', title: 'RHF', component: <RHF /> },
+      { value: 'RHFZod', title: 'RHFZod', component: <RHFZod /> },
+       { value: 'RHFZodShadcn', title: 'RHFZodShadcn', component: <RHFZodShadcn /> },
 
 ]
 

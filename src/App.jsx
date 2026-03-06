@@ -1,5 +1,8 @@
 import { Error404 } from "./layout/Error404"
 import Layout from "./layout/Layout"
+import { BookDetailPage } from "./modules/Books/Page/BookDetailPage"
+import { BooksPageFetch } from "./modules/Books/Page/BooksPageFetch"
+import { BooksPageTanstack } from "./modules/Books/Page/BooksPageTanstack"
 import { Dashboard } from "./modules/dashboard/pages/Dashboard"
 import { DataTablePage } from "./modules/DataTable/pages/DataTablePage"
 import { Contador } from "./modules/forms/pages/Contador"
@@ -29,6 +32,9 @@ function App() {
           <Route path="/shadcn" element={<ShadcnIndex />}></Route>
            <Route path="/data-table" element={<DataTablePage />}></Route>
            <Route path="/formularios" element={<FormIndex />}></Route>
+            <Route path="/books-fetch" element={<BooksPageFetch />}></Route>
+            <Route path="/books-tanstack" element={<BooksPageTanstack />}></Route>
+            <Route path="/books/:id" element={<BookDetailPage />}></Route>
         </Route>
 
           <Route path="*" element={<Error404/>}/>

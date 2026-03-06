@@ -8,19 +8,27 @@ import { TaskProvider } from './context/TaskContext'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import { Toaster } from 'sonner'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 
+
+// Create a client
+const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <TooltipProvider>
-        <TaskProvider>
-          <Provider store={store}>
-            <Toaster />
-            <App />
-          </Provider>
-        </TaskProvider>
-      </TooltipProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <TaskProvider>
+            <Provider store={store}>
+              <Toaster />
+              <App />
+            </Provider>
+          </TaskProvider>
+        </TooltipProvider>
+        <ReactQueryDevtools initialIsOpen={false} />
+      </QueryClientProvider>
     </BrowserRouter>
   </StrictMode>,
 )

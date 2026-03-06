@@ -85,6 +85,27 @@ const data = {
         <CameraIcon />
       ),
     },
+          {
+      title: "Books",
+      url: "/books-fetch",
+      icon: (
+        <CommandIcon />
+      ),
+    },
+           {
+      title: "Books Tanstack",
+      url: "/books-tanstack",
+      icon: (
+        <CommandIcon />
+      ),
+    },
+    {
+      title: "Books Tanstack-Detail",
+      url: "books-tanstack/:id",
+      icon: (
+        <CommandIcon />
+      ),
+    },
   ],
   navClouds: [
     {

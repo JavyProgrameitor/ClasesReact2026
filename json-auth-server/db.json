@@ -1,0 +1,447 @@
+{
+  "users": [
+    {
+      "email": "luismiguel.cabezas@juntaex.es",
+      "password": "$2a$10$UJ78lhr2hv6v/ZJcN0znreJ1DuxCoNzd7DDGmCp9zqMUe1/qxol3K",
+      "name": "Luis Miguel Cabezas",
+      "id": 1
+    },
+    {
+      "email": "joseandres.centeno@juntaex.es",
+      "password": "$2a$10$C/h3mk55.tDoDuKnHIoEpOGOWAVpN68fXr1RSUV6ogRj8r9nRgltm",
+      "id": 2
+    }
+  ],
+  "usuarios": [
+    {
+      "nombreCompleto": "Carlos García Pérez",
+      "username": "cgarcia",
+      "email": "cgarcia@example.com",
+      "id": "dd4d"
+    },
+    {
+      "nombreCompleto": "Laura Martínez Rodríguez",
+      "username": "lmartinez",
+      "email": "lmartinez@example.com",
+      "id": "0f84"
+    },
+    {
+      "nombreCompleto": "Javier López Sánchez",
+      "username": "jlopez",
+      "email": "jlopez@example.com",
+      "id": "17db"
+    },
+    {
+      "nombreCompleto": "Ana Hernández Gómez",
+      "username": "ahernandez",
+      "email": "ahernandez@example.com",
+      "id": "ed20"
+    },
+    {
+      "nombreCompleto": "Miguel Fernández Díaz",
+      "username": "mfernandez",
+      "email": "mfernandez@example.com",
+      "id": "a4c2"
+    },
+    {
+      "nombreCompleto": "Lucía Ruiz Muñoz",
+      "username": "lruiz",
+      "email": "lruiz@example.com",
+      "id": "5543"
+    },
+    {
+      "nombreCompleto": "Pedro Moreno Jiménez",
+      "username": "pmoreno",
+      "email": "pmoreno@example.com",
+      "id": "4829"
+    },
+    {
+      "nombreCompleto": "Sofía Romero Ortiz",
+      "username": "sromero",
+      "email": "sromero@example.com",
+      "id": "b95b"
+    },
+    {
+      "nombreCompleto": "Alberto Navarro Gil",
+      "username": "anavarro",
+      "email": "anavarro@example.com",
+      "id": "1c74"
+    },
+    {
+      "nombreCompleto": "Elena Castro López",
+      "username": "ecastro",
+      "email": "ecastro@example.com",
+      "id": "2a55"
+    }
+  ],
+  "tareas": [
+    {
+      "titulo": "Nueva tarea",
+      "responsable": "Carlos",
+      "activo": true,
+      "id": 16
+    },
+    {
+      "titulo": "Nueva tarea",
+      "responsable": "Carlos",
+      "activo": true,
+      "id": 17
+    },
+    {
+      "titulo": "Nueva tarea",
+      "responsable": "Carlos",
+      "activo": true,
+      "id": 18
+    },
+    {
+      "titulo": "Nueva tarea",
+      "responsable": "Carlos",
+      "activo": true,
+      "id": 19
+    }
+  ],
+  "payments": [
+    {
+      "id": "9a72bd44",
+      "amount": 320,
+      "status": "success",
+      "email": "pedro@example.com"
+    },
+    {
+      "id": "d73a1c65",
+      "amount": 60,
+      "status": "pending",
+      "email": "sofia@example.com"
+    },
+    {
+      "id": "4f2e8c19",
+      "amount": 140,
+      "status": "success",
+      "email": "carlos@example.com"
+    },
+    {
+      "id": "a81c9b53",
+      "amount": 95,
+      "status": "failed",
+      "email": "lucia@example.com"
+    },
+    {
+      "id": "7d6b3f12",
+      "amount": 210,
+      "status": "processing",
+      "email": "alberto@example.com"
+    },
+    {
+      "id": "c2e5a471",
+      "amount": 400,
+      "status": "success",
+      "email": "maria@example.com"
+    },
+    {
+      "id": "3b7f9d84",
+      "amount": 110,
+      "status": "pending",
+      "email": "diego@example.com"
+    },
+    {
+      "id": "8c1e6a25",
+      "amount": 55,
+      "status": "success",
+      "email": "elena@example.com"
+    },
+    {
+      "id": "f4d2a963",
+      "amount": 275,
+      "status": "processing",
+      "email": "pablo@example.com"
+    },
+    {
+      "id": "6e5a1b78",
+      "amount": 130,
+      "status": "failed",
+      "email": "andrea@example.com"
+    },
+    {
+      "id": "b91c4e30",
+      "amount": 90,
+      "status": "success",
+      "email": "sergio@example.com"
+    },
+    {
+      "id": "2d8f7a56",
+      "amount": 160,
+      "status": "pending",
+      "email": "nuria@example.com"
+    },
+    {
+      "id": "e3c9b214",
+      "amount": 310,
+      "status": "success",
+      "email": "javier@example.com"
+    },
+    {
+      "id": "5a4e6f90",
+      "amount": 70,
+      "status": "failed",
+      "email": "paula@example.com"
+    }
+  ],
+
+  "books": [
+    {
+      "id": 1,
+      "title": "Clean Code",
+      "author": "Robert C. Martin",
+      "year": 2008,
+      "pages": 464,
+      "genre": "Software Engineering",
+      "rating": 4.7,
+      "language": "English",
+      "publisher": "Prentice Hall",
+      "isbn": "9780132350884",
+      "copies": 3,
+      "available": 2,
+      "location": "Technology / Programming",
+      "tags": ["programming", "clean code", "software"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780132350884-M.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Pragmatic Programmer",
+      "author": "Andrew Hunt, David Thomas",
+      "year": 1999,
+      "pages": 352,
+      "genre": "Software Engineering",
+      "rating": 4.8,
+      "language": "English",
+      "publisher": "Addison-Wesley",
+      "isbn": "9780201616224",
+      "copies": 2,
+      "available": 1,
+      "location": "Technology / Programming",
+      "tags": ["software", "best practices"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780201616224-M.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Eloquent JavaScript",
+      "author": "Marijn Haverbeke",
+      "year": 2018,
+      "pages": 472,
+      "genre": "JavaScript",
+      "rating": 4.5,
+      "language": "English",
+      "publisher": "No Starch Press",
+      "isbn": "9781593279509",
+      "copies": 4,
+      "available": 3,
+      "location": "Technology / Web Development",
+      "tags": ["javascript", "web"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781593279509-M.jpg"
+    },
+    {
+      "id": 4,
+      "title": "JavaScript: The Good Parts",
+      "author": "Douglas Crockford",
+      "year": 2008,
+      "pages": 176,
+      "genre": "JavaScript",
+      "rating": 4.3,
+      "language": "English",
+      "publisher": "O'Reilly Media",
+      "isbn": "9780596517748",
+      "copies": 3,
+      "available": 0,
+      "location": "Technology / Web Development",
+      "tags": ["javascript"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780596517748-M.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Refactoring",
+      "author": "Martin Fowler",
+      "year": 2018,
+      "pages": 448,
+      "genre": "Software Engineering",
+      "rating": 4.6,
+      "language": "English",
+      "publisher": "Addison-Wesley",
+      "isbn": "9780134757599",
+      "copies": 2,
+      "available": 1,
+      "location": "Technology / Programming",
+      "tags": ["refactoring", "software"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780134757599-M.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Design Patterns",
+      "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+      "year": 1994,
+      "pages": 395,
+      "genre": "Software Engineering",
+      "rating": 4.7,
+      "language": "English",
+      "publisher": "Addison-Wesley",
+      "isbn": "9780201633610",
+      "copies": 2,
+      "available": 2,
+      "location": "Technology / Programming",
+      "tags": ["design patterns"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780201633610-M.jpg"
+    },
+    {
+      "id": 7,
+      "title": "You Don't Know JS Yet",
+      "author": "Kyle Simpson",
+      "year": 2020,
+      "pages": 143,
+      "genre": "JavaScript",
+      "rating": 4.6,
+      "language": "English",
+      "publisher": "O'Reilly Media",
+      "isbn": "9781098124045",
+      "copies": 3,
+      "available": 2,
+      "location": "Technology / Web Development",
+      "tags": ["javascript", "advanced"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781098124045-M.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Deep Work",
+      "author": "Cal Newport",
+      "year": 2016,
+      "pages": 304,
+      "genre": "Productivity",
+      "rating": 4.4,
+      "language": "English",
+      "publisher": "Grand Central Publishing",
+      "isbn": "9781455586691",
+      "copies": 2,
+      "available": 1,
+      "location": "General / Productivity",
+      "tags": ["focus", "productivity"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781455586691-M.jpg"
+    },
+    {
+      "id": 9,
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "year": 2018,
+      "pages": 320,
+      "genre": "Self Improvement",
+      "rating": 4.8,
+      "language": "English",
+      "publisher": "Avery",
+      "isbn": "9780735211292",
+      "copies": 4,
+      "available": 3,
+      "location": "General / Personal Development",
+      "tags": ["habits", "self improvement"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780735211292-M.jpg"
+    },
+    {
+      "id": 10,
+      "title": "The Phoenix Project",
+      "author": "Gene Kim, Kevin Behr, George Spafford",
+      "year": 2013,
+      "pages": 432,
+      "genre": "DevOps",
+      "rating": 4.5,
+      "language": "English",
+      "publisher": "IT Revolution Press",
+      "isbn": "9780988262508",
+      "copies": 3,
+      "available": 2,
+      "location": "Technology / DevOps",
+      "tags": ["devops", "it management"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780988262508-M.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Accelerate",
+      "author": "Nicole Forsgren, Jez Humble, Gene Kim",
+      "year": 2018,
+      "pages": 288,
+      "genre": "DevOps",
+      "rating": 4.6,
+      "language": "English",
+      "publisher": "IT Revolution Press",
+      "isbn": "9781942788331",
+      "copies": 2,
+      "available": 2,
+      "location": "Technology / DevOps",
+      "tags": ["devops", "performance"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781942788331-M.jpg"
+    },
+    {
+      "id": 12,
+      "title": "The Lean Startup",
+      "author": "Eric Ries",
+      "year": 2011,
+      "pages": 336,
+      "genre": "Business",
+      "rating": 4.3,
+      "language": "English",
+      "publisher": "Crown Business",
+      "isbn": "9780307887894",
+      "copies": 2,
+      "available": 0,
+      "location": "Business / Innovation",
+      "tags": ["startup", "innovation"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780307887894-M.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Working Effectively with Legacy Code",
+      "author": "Michael Feathers",
+      "year": 2004,
+      "pages": 456,
+      "genre": "Software Engineering",
+      "rating": 4.5,
+      "language": "English",
+      "publisher": "Prentice Hall",
+      "isbn": "9780131177055",
+      "copies": 2,
+      "available": 1,
+      "location": "Technology / Programming",
+      "tags": ["legacy code", "testing"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780131177055-M.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Don't Make Me Think",
+      "author": "Steve Krug",
+      "year": 2014,
+      "pages": 216,
+      "genre": "UX",
+      "rating": 4.6,
+      "language": "English",
+      "publisher": "New Riders",
+      "isbn": "9780321965516",
+      "copies": 3,
+      "available": 3,
+      "location": "Technology / UX",
+      "tags": ["ux", "usability"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9780321965516-M.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Sprint",
+      "author": "Jake Knapp",
+      "year": 2016,
+      "pages": 288,
+      "genre": "Productivity",
+      "rating": 4.4,
+      "language": "English",
+      "publisher": "Simon & Schuster",
+      "isbn": "9781501121744",
+      "copies": 2,
+      "available": 1,
+      "location": "Business / Product Design",
+      "tags": ["design sprint", "product"],
+      "coverUrl": "https://covers.openlibrary.org/b/isbn/9781501121744-M.jpg"
+    }
+  ]
+}
